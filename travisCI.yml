@@ -1,0 +1,29 @@
+language: python
+python:
+  - "3.12.0"  # Specify the Python version to use for the build
+
+# This section is crucial for installing any dependencies your project needs.
+# For Python, this typically involves installing packages listed in a requirements.txt file.
+install:
+  - pip install -r requirements.txt  # Install Python dependencies from requirements.txt
+
+# Optional: Commands to run before the script step.
+# For example, if you need to set up environment variables or a database.
+# before_script:
+#   - echo "Running pre-script commands..."
+
+script:
+  - python cake_factory_test.py  # Run the test suite for the cake factory application
+
+# Optional: Cache installed dependencies to speed up subsequent builds.
+# Travis CI will cache the directory specified, so if your dependencies are in a virtual environment
+# or a specific package directory, you'd specify that here.
+# For pip, it often caches in ~/.cache/pip
+# cache: pip
+
+notifications:
+  email:
+    recipients:
+      - lfrv@me.com
+    on_success: never  # Notify on success
+    on_failure: always  # Notify on failure
