@@ -32,7 +32,7 @@ class TestCakeFactory(unittest.TestCase):
     cake.add_topping("sprinkles")
     cake.add_topping("cherries")
     price = cake.check_price()
-    self.assertEqual(price, 13) # change it to 13 to fail the test
+    self.assertEqual(price, 14) # change it to 13 to fail the test
 
 
 
