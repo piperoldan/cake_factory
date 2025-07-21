@@ -14,7 +14,7 @@ install:
 
 script:
   - python cake_factory_test.py  # Run the test suite for the cake factory application
-
+# - pytest  # Uncomment if you want to use pytest for running tests
 # Optional: Cache installed dependencies to speed up subsequent builds.
 # Travis CI will cache the directory specified, so if your dependencies are in a virtual environment
 # or a specific package directory, you'd specify that here.
